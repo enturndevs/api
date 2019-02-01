@@ -1,2 +1,6 @@
 # enable debug
 debug: true
+
+# server config
+server:
+    port: :80
