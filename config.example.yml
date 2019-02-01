@@ -4,3 +4,11 @@ debug: true
 # server config
 server:
     port: :80
+
+# db config
+db:
+    host: 127.0.0.1
+    port: 3306
+    name: ensure
+    username: root
+    password: root
