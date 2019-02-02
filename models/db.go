@@ -46,7 +46,7 @@ func getDSN() string {
 	}
 	dbname := viper.GetString("db.name")
 	if dbname == "" {
-		dbname = "enture"
+		dbname = "enturn"
 	}
 	return fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?loc=%s", username, password, host, port, dbname, "Asia%2FTaipei")
 }
