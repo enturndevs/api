@@ -2,6 +2,7 @@ module github.com/enturndevs/enturn-service
 
 require (
 	github.com/BurntSushi/toml v0.3.1 // indirect
+	github.com/badoux/checkmail v0.0.0-20181210160741-9661bd69e9ad
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/gin-contrib/sse v0.0.0-20190125020943-a7658810eb74 // indirect
 	github.com/gin-gonic/gin v1.3.0

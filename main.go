@@ -3,6 +3,8 @@ package main
 import (
 	"os"
 
+	"github.com/enturndevs/enturn-service/models"
+
 	"github.com/enturndevs/enturn-service/cmd"
 	c "github.com/enturndevs/enturn-service/core/config"
 	l "github.com/enturndevs/enturn-service/core/logger"
@@ -17,6 +19,8 @@ var Version = "0.0.1"
 func main() {
 	c.Init()
 	l.Init()
+	models.InitDB()
+	models.InitRedis()
 
 	app := cli.NewApp()
 	app.Name = "Enturn"
