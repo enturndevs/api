@@ -497,6 +497,10 @@ func LoginUser(email string, passwd string) (*User, error) {
 		return nil, ErrUserWrongPasswd{Passwd: passwd}
 	}
 
+	if !user.IsActive {
+		return nil, ErrUserIsDisabled{email}
+	}
+
 	sess := x.NewSession()
 	defer sess.Close()
 

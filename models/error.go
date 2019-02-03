@@ -64,3 +64,12 @@ type ErrUserTelephoneAlreadyExist struct {
 func (err ErrUserTelephoneAlreadyExist) Error() string {
 	return fmt.Sprintf("User's telephone already exists [telephone: %s]", err.Telephone)
 }
+
+// ErrUserIsDisabled represents a "User is disabled" error.
+type ErrUserIsDisabled struct {
+	Email string
+}
+
+func (err ErrUserIsDisabled) Error() string {
+	return fmt.Sprintf("User is disabled [email: %s]", err.Email)
+}
