@@ -156,6 +156,7 @@ func CreateUser(user *User) (err error) {
 	}
 
 	user.Passwd = CryptoPasswd(user.Passwd)
+	user.IsActive = true
 
 	if _, err := sess.Insert(user); err != nil {
 		logger.Error(err)

@@ -139,13 +139,13 @@ func TestUpdateUserPasswd(t *testing.T) {
 	})
 }
 
-func TestEnableUser(t *testing.T) {
-	err := EnableUser(1)
+func TestDisableUser(t *testing.T) {
+	err := DisableUser(testUserID)
 	assert.Nil(t, err)
 }
 
-func TestDisableUser(t *testing.T) {
-	err := DisableUser(1)
+func TestEnableUser(t *testing.T) {
+	err := EnableUser(testUserID)
 	assert.Nil(t, err)
 }
 
