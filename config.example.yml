@@ -4,6 +4,7 @@ debug: true
 # server config
 server:
     port: :80
+    token:
 
 # db config
 db:
@@ -18,3 +19,4 @@ redis:
     host: 127.0.0.1
     port: 6379
     db: 0
+    password:

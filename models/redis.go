@@ -24,9 +24,9 @@ func InitRedis() {
 	}
 
 	r = redis.NewClient(&redis.Options{
-		Network: "tcp",
-		Addr:    fmt.Sprintf("%s:%d", host, port),
-		DB:      viper.GetInt("redis.db"),
+		Addr:     fmt.Sprintf("%s:%d", host, port),
+		Password: viper.GetString("redis.password"),
+		DB:       viper.GetInt("redis.db"),
 	})
 
 	if _, err := r.Ping().Result(); err != nil {
